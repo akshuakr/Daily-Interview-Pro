@@ -1,0 +1,20 @@
+Q1.
+
+Hi, here's your problem today. This problem was recently asked by Facebook:
+
+You are given an array of integers. Return the smallest positive integer that is not present in the array. The array may contain duplicate entries.
+
+For example, the input [3, 4, -1, 1] should return 2 because it is the smallest positive integer that doesn't exist in the array.
+
+Ans.
+
+n=eval(input('enter the list: '))
+b=sorted(n)
+e=list(dict.fromkeys(b))
+z=list(filter(lambda x: x >=0, e))
+d=b[-1]
+c=list(range(1,d+1))
+for i in range(0,d+1):
+    if z[i]!=c[i]:
+        break
+print(c[i])
